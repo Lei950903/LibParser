@@ -1,0 +1,32 @@
+[
+    {
+        "directory": ".",
+        "arguments": ["g++", "-std=c++17", "-I.", "-c", "main.cpp"],
+        "file": "main.cpp"
+    },
+    {
+        "directory": ".",
+        "arguments": ["g++", "-std=c++17", "-I.", "-c", "LibertyParser.cpp"],
+        "file": "LibertyParser.cpp"
+    },
+    {
+        "directory": ".",
+        "arguments": ["g++", "-std=c++17", "-I.", "-c", "externalInputs.cpp"],
+        "file": "externalInputs.cpp"
+    },
+    {
+        "directory": ".",
+        "arguments": ["g++", "-std=c++17", "-I.", "-c", "pathAnalyzer.cpp"],
+        "file": "pathAnalyzer.cpp"
+    },
+    {
+        "directory": ".",
+        "arguments": ["g++", "-std=c++17", "-I.", "-c", "cfgFileLoader.cpp"],
+        "file": "cfgFileLoader.cpp"
+    },
+    {
+        "directory": ".",
+        "arguments": ["g++", "-std=c++17", "-I.", "-c", "test.cpp"],
+        "file": "test.cpp"
+    }
+]

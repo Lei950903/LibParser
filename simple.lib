@@ -1,0 +1,70 @@
+library(simple_lib) {
+    delay_model : table_lookup;
+    technology(cmos);
+
+    lu_table_template(delay_template_2x2) {
+        variable_1: input_net_transition;
+        variable_2: total_output_net_capacitance;
+        index_1("10, 100");
+        index_2("10, 100");
+    }
+
+    time_unit: "1ps";
+    capacitance_unit: "1ff";
+
+    cell(AND2_X1) {
+        pin(A) { direction: input; capacitance: 1; }
+        pin(B) { direction: input; capacitance: 1; }
+        pin(Y) {
+            direction: output; 
+            function: "A * B"; 
+            timing() {
+                related_pin : "A"; 
+                timing_sense:  positive_unate;
+                cell_rise(delay_template_2x2) { values("50, 80", "60, 90"); }
+                rise_transition(delay_template_2x2) { values("20, 40", "30, 50"); }
+                cell_fall(delay_template_2x2) { values("40, 70", "50, 80"); }
+                fall_transition(delay_template_2x2) { values("30, 50", "40, 60"); }
+            }
+        }
+    }
+
+
+    cell(BUF_X1) {
+        pin(A) { direction: input; capacitance: 1; }
+        pin(Y) {
+            direction: output; 
+            function: "A"; 
+            timing() {
+                related_pin : "A"; 
+                timing_sense:  positive_unate;
+                cell_rise(delay_template_2x2) { values("30, 50", "40, 60"); }
+                rise_transition(delay_template_2x2) { values("15, 25", "20, 30"); }
+                cell_fall(delay_template_2x2) { values("25, 45", "35, 55"); }
+                fall_transition(delay_template_2x2) { values("20, 30", "25, 40"); }
+            }
+        }
+    }
+
+    cell(DFF_X1) {
+        pin(CK) { direction: input; clock: true; capacitance: 1; }
+        pin(D) { direction: input; capacitance: 1; }
+        pin(Q) {
+            direction: output; 
+            function: "Q";
+            timing() {
+                related_pin : "CK";
+                timing_type : rising_edge;
+                cell_rise(delay_template_2x2) { values("100, 120", "110, 130"); }
+                rise_transition(delay_template_2x2) { values("20, 40", "30, 50"); }
+                cell_fall(delay_template_2x2) { values("90, 110", "100, 120"); }
+                fall_transition(delay_template_2x2) { values("30, 50", "40, 60"); }
+            }
+        }
+        ff("IQ", "CK") {
+            next_state : "D";
+            setup : 50;
+            hold : 30;
+        }
+    }
+}

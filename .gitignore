@@ -1,0 +1,14 @@
+# Build artifacts
+build/
+*.o
+*.d
+LibertyParser
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System
+.DS_Store

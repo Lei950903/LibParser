@@ -1,0 +1,180 @@
+{
+  "files_in_context": [
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "file_mentioned",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": null
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787026619112
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787026767935
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787026774029
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787026995432
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787027001061
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787027004678
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787027061963
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787027332650
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787033169698
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787033204379
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787033253979
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787033285591
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787033388484
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787033482384
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787033530263
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787033533306
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787033582741
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787033778977
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "stale",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787034084469
+    },
+    {
+      "path": "pathAnalyzer.cpp",
+      "record_state": "active",
+      "record_source": "user_edited",
+      "cline_read_date": 1787026588971,
+      "cline_edit_date": null,
+      "user_edit_date": 1787034091486
+    }
+  ],
+  "model_usage": [
+    {
+      "ts": 1787026588075,
+      "model_id": "gpt-5.3-codex",
+      "model_provider_id": "openai-native",
+      "mode": "act"
+    }
+  ]
+}
