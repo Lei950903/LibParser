@@ -5,7 +5,7 @@
 
 
 int main() {
-    std::string fileName = "/home/xulei/Lei_Develop/My_Sta_Lab/day1/simple.lib";
+    std::string fileName = "simple.lib";
     LibertyParser libParser(fileName);
     libParser.deleteComments();
     std::cout<< "======================================================" << std::endl;

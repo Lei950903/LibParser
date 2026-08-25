@@ -11,11 +11,6 @@
     },
     {
         "directory": ".",
-        "arguments": ["g++", "-std=c++17", "-I.", "-c", "externalInputs.cpp"],
-        "file": "externalInputs.cpp"
-    },
-    {
-        "directory": ".",
         "arguments": ["g++", "-std=c++17", "-I.", "-c", "pathAnalyzer.cpp"],
         "file": "pathAnalyzer.cpp"
     },

@@ -47,8 +47,8 @@ AnalysisConfig loadFromCfg(const std::string& filePath) {
         else if (key == "transition") config.transitionValue = std::stod(value);
         else if (key == "load") config.loadValue = std::stod(value);
         else if (key == "clock_period") config.clockPeriod = std::stod(value);
-        else if (key == "setup_require") config.setupRequiredTime = std::stod(value);
-        else if (key == "hold_require") config.holdRequiredTime = std::stod(value);
+        else if (key == "setup_required") config.setupRequiredTime = std::stod(value);
+        else if (key == "hold_required") config.holdRequiredTime = std::stod(value);
         else if (key == "extra_segment") {
             std::stringstream ss(value);
             std::string part;

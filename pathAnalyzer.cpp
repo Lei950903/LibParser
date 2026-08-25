@@ -23,12 +23,12 @@ std::vector<PathSegment> PathAnalyzer::loadConfigFromFileToSegments(const Analys
     for(const auto& extra : config.extraSegPaths) {
         PathSegment seg;
 
-        mainSeg.cellName = std::get<0>(extra);
-        mainSeg.fromPin = std::get<1>(extra);
-        mainSeg.toPin = std::get<2>(extra);
-        mainSeg.tableType = std::get<3>(extra);
-        mainSeg.transition = config.transitionValue;
-        mainSeg.load = config.loadValue;
+        seg.cellName = std::get<0>(extra);
+        seg.fromPin = std::get<1>(extra);
+        seg.toPin = std::get<2>(extra);
+        seg.tableType = std::get<3>(extra);
+        seg.transition = config.transitionValue;
+        seg.load = config.loadValue;
 
         segmentsArray.push_back(seg);
     }
@@ -42,9 +42,8 @@ double PathAnalyzer::accumulateSegAndTotalPathDelay(std::vector<PathSegment>& se
     if(segments.empty()) return 0.0;
     double totalDelay =  0.0;
     double currentTransition = segments[0].transition;
-    TimingArc* targetArc = nullptr;
 
-    for(const auto& seg : segments) {
+    for(auto& seg : segments) {
         std::string cellName = seg.cellName;
         auto cellIt = m_cells.find(cellName);
 
@@ -53,13 +52,14 @@ double PathAnalyzer::accumulateSegAndTotalPathDelay(std::vector<PathSegment>& se
             continue;
         }
         
-        Cell cell = cellIt->second;
+        const Cell& cell = cellIt->second;
+        const TimingArc* targetArc = nullptr;
 
         for(const auto& pin : cell.pins) {
             if(pin.name == seg.toPin) {
-                for(auto& arc : pin.timing_arcs) {
+                for(const auto& arc : pin.timing_arcs) {
                     if(arc.related_pin == seg.fromPin) {
-                        targetArc = const_cast<TimingArc*>(&arc);
+                        targetArc = &arc;
                         break;
                     }
                 }
@@ -83,6 +83,7 @@ double PathAnalyzer::accumulateSegAndTotalPathDelay(std::vector<PathSegment>& se
         }
 
         double segDelay = m_libParser.interpolateDelay(delayTable, currentTransition, seg.load);
+        seg.delay = segDelay;
         totalDelay += segDelay;
 
         LookupTable slewTable;
